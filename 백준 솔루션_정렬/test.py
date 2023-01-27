@@ -1,16 +1,8 @@
 def most_common (arr):
-    count_list = []
-    max_value = []
-    no_dul_arr = list(set(arr))
-    no_dul_arr.sort()
-    arr.sort()
-    for i in range(len(no_dul_arr)):
-        count_list.append(arr.count(no_dul_arr[i]))
-    for i in range(len(count_list)):
-        if count_list[i] == max(count_list):
-            max_value.append(no_dul_arr[i])
-    if len(max_value) == 1:
-        return max_value[:]
-    else :
-        max_value.sort()
-        return max_value[-2]
+    no_dup_arr = list(set(arr))
+    cnt_Lst = []
+    for num in no_dup_arr:
+        cnt_Lst.append(arr.count(num))
+    print(cnt_Lst)
+
+most_common([1,2,3,3,4,4,4,5])
