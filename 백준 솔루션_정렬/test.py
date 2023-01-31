@@ -1,8 +1,18 @@
-def most_common (arr):
-    no_dup_arr = list(set(arr))
-    cnt_Lst = []
-    for num in no_dup_arr:
-        cnt_Lst.append(arr.count(num))
-    print(cnt_Lst)
+def most_frequent(List):
+    counter = 0
+    arr = set()
+    
+    for i in List: # i : [2, 1, 2, 2, 1, 1, 3]
+        max_frequency = List.count(i) # curr_frequency : 3
+        if(max_frequency >= counter): # if 3 > 0
+            counter = max_frequency # counter : 3
+            arr.add(i) # num : 2
+ 
+    rlt = list(arr)
+    if len(rlt) == 1:
+        return rlt
+    else :
+        return rlt
 
-most_common([1,2,3,3,4,4,4,5])
+List = [-1, -2, -3, -1, -2]
+print(most_frequent(List))
